@@ -112,7 +112,6 @@ int main(int ac, char **av);
 
 /* builtin.c */
 int _myexit(info_t *info);
-int _mycd(info_t *info);
 
 /* builtin1.c */
 int _myalias(info_t *);
@@ -122,19 +121,10 @@ int print_alias(list_t *node);
 
 /* parser.c */
 int is_cmd(info_t *, char *);
-char *dup_chars(char *, int, int);
 char *find_path(info_t *, char *, char *);
 
-/* my_findpath */
-int is_command_present(info_t *info, const char *path, const char *cmd);
-char *find_path(info_t *info, char *pathstr, char *cmd);
-
-/*my_findpath2 */
-char *join_path(char *dir, char *file);
-char *get_next_path_segment(char *pathstr, int *idx);
-
-/* toem_memory.c */
-int bfree(void **);
+/* memory.c */
+int bfree(void **ptr);
 
 /* toem_realloc.c */
 char *_memset(char *, char, unsigned int);
