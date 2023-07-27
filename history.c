@@ -47,7 +47,6 @@ return (1);
 /**
 * read_history - reads history files
 * @info: structure with arguments.
-*
 * Return: histcount on success 0 on fail.
 */
 int read_history(info_t *info)
